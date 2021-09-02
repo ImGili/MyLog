@@ -39,3 +39,21 @@ docker ps -a
 # 下载镜像
 docker pull ubuntu
 ```
+
+```zsh
+# 登入docker
+docker login
+```
+
+```zsh
+# 将容器提交成镜像
+docker commit -m "描述" -a "作者" 容器名 镜像名
+# 镜像名规范
+注册名/镜像名
+# 例如
+imgili/myubuntu
+docker commit -m "描述" -a "作者" myubuntu imgili/myubuntu
+# 不用规范的镜像名，将不允许上传
+push imgili/myubuntu
+```
+> **不用规范的镜像名，将不允许上传**
