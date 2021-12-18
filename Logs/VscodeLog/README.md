@@ -5,3 +5,9 @@
 # 这个是设置ssh
 ssh root@127.0.0.1 -p 1995
 ```
+
+## CMake debug 输入参数
+``settings.json``
+```
+"cmake.debugConfig": {"args": ["103"]}
+```
