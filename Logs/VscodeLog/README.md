@@ -16,7 +16,9 @@ ssh root@127.0.0.1 -p 1995
 ```bash
 vcpkg integrate install
 ```
-
+> ctrl + p 
+> 输入 > Open Workspace setting
+在``.vccode/setting.json``添加如下键值对
 ```bash
 "cmake.configureArgs": [
   "-DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE",
