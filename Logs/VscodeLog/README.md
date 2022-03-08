@@ -25,3 +25,8 @@ vcpkg integrate install
   "-DCMAKE_TOOLCHAIN_FILE=D:/codes/vcpkg/scripts/buildsystems/vcpkg.cmake"
 ]
 ```
+
+## vcpkg 安装静态库
+```bash
+vcpkg install wxwidgets:x64-windows-static
+```
