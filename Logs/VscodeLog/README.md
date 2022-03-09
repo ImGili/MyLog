@@ -21,7 +21,6 @@ vcpkg integrate install
 在``.vccode/setting.json``添加如下键值对
 ```bash
 "cmake.configureArgs": [
-  "-DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE",
   "-DCMAKE_TOOLCHAIN_FILE=D:/codes/vcpkg/scripts/buildsystems/vcpkg.cmake"
 ]
 ```
@@ -29,4 +28,15 @@ vcpkg integrate install
 ## vcpkg 安装静态库
 ```bash
 vcpkg install wxwidgets:x64-windows-static
+```
+
+## vcpkg 静态链接
+```
+cmake .. -DCMAKE_TOOLCHAIN_FILE=.../vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x86-windows-static
+```
+
+或者在CMakeLists.txt里添加
+```cmake
+set(VCPKG_TARGET_TRIPLET x86-windows-static)
+set(CMAKE_TOOLCHAIN_FILE D:/codes/vcpkg/scripts/buildsystems/vcpkg.cmak)
 ```
