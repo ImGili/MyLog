@@ -40,3 +40,6 @@ cmake .. -DCMAKE_TOOLCHAIN_FILE=.../vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x86-windo
 set(VCPKG_TARGET_TRIPLET x86-windows-static)
 set(CMAKE_TOOLCHAIN_FILE D:/codes/vcpkg/scripts/buildsystems/vcpkg.cmak)
 ```
+
+## ``vscode``全局查找函數及文件
+``Ctrl + Shift + F``
