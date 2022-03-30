@@ -30,3 +30,6 @@ vcpkg integrate install
 ```bash
 vcpkg install wxwidgets:x64-windows-static
 ```
+
+## vscode调试js
+点击debug按钮，点击生成luanch.json按钮，默认配置就ok
