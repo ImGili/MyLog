@@ -21,7 +21,6 @@ vcpkg integrate install
 在``.vccode/setting.json``添加如下键值对
 ```bash
 "cmake.configureArgs": [
-  "-DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE",
   "-DCMAKE_TOOLCHAIN_FILE=D:/codes/vcpkg/scripts/buildsystems/vcpkg.cmake"
 ]
 ```
@@ -33,3 +32,16 @@ vcpkg install wxwidgets:x64-windows-static
 
 ## vscode调试js
 点击debug按钮，点击生成luanch.json按钮，默认配置就ok
+## vcpkg 静态链接
+```
+cmake .. -DCMAKE_TOOLCHAIN_FILE=.../vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x86-windows-static
+```
+
+或者在CMakeLists.txt里添加
+```cmake
+set(VCPKG_TARGET_TRIPLET x86-windows-static)
+set(CMAKE_TOOLCHAIN_FILE D:/codes/vcpkg/scripts/buildsystems/vcpkg.cmak)
+```
+
+## ``vscode``全局查找函數及文件
+``Ctrl + Shift + F``
